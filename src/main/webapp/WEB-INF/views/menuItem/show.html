@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Item Detail</title>
+</head>
+<body>
+<p th:text="'ID: ' + ${item.getId()}"></p>
+<p th:text="'Name: ' + ${item.getName()}" ></p>
+<p th:text="'Price: $' +  ${item.getPrice()}"></p>
+</body>
+</html>

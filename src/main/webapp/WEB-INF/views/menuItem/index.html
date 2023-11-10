@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Items</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="item : ${menuItems}">
+            <td th:text="${item.getId()}"></td>
+            <td><a th:href="@{/menu/{id}(id=${item.getId()})}" th:text="${item.getName()}"></a></td>
+            <td th:text="'$' + ${item.getPrice()}" ></td>
+        </tr>
+    </table>
+</body>
+</html>
